@@ -1,8 +1,8 @@
 ---
 title: '4,222 Introduction to Programming'
-subtitle: 'Lecture 9: Databases & SQL'
+subtitle: 'Lecture 10: Queries'
 author: "Dr. Aurélien Sallin"
-date: "2026-05-01"
+date: "2026-05-08"
 code-line-numbers: false
 format:
   revealjs:
@@ -67,7 +67,7 @@ relational data bmodel:
 
 :::: {.columns style="font-size: 0.85em;"}
 ::: {.column width="50%"}
-#### **Data in memory**: pandas, polars, dplyr
+#### **Data in memory**: pandas, (polars), dplyr
 :::
 ::: {.column width="50%"}
 #### **Data in a database**: SQL
@@ -195,7 +195,7 @@ In the case of structured data, the organization is based on the relational mode
 - You send it a query: *"Which countries exported more than 10B in 2022?"*
 - It returns the answer.
 
-You never touch or manipulate the raw data directly. The DBMS handles storage, indexing, and access. It serves you the data "on a silver platter".
+You never touch or manipulate the raw data directly. The DBMS handles storage and access. It serves you the data "on a silver platter".
 
 :::
 
@@ -422,7 +422,7 @@ Imagine storing everything in one table:
 
 ## The star schema ⭐
 
-- Most widely used to develop data warehouses
+- Most widely used to develop data warehouses (databases optimized for analytics)
 - Consists of one or more **fact tables** referencing any number of **dimension tables**.
 
 <div style="margin-top: 1em;"></div>
@@ -785,7 +785,7 @@ OLAP is mostly read-heavy with occasional bulk loads. DuckDB uses a simpler mode
 - embedded (runs inside Python/R, no server)
 - open source, free, and easy to set up: `uv add duckdb`
 - Reads CSV, Parquet, JSON directly
-- One `.db` file, shareable
+- One [db]{.path} file, shareable
 :::
 :::
 
@@ -1315,7 +1315,7 @@ LIMIT    n                  -- truncate output (optional)
 <div style="margin-top: 1em;"></div>
 
 - The database executes `FROM` → `WHERE` → `SELECT` → `ORDER BY` → `LIMIT`.
-- `SELECT` is written first but evaluated last. This is why you can use a column alias in `ORDER BY` but not in `WHERE`.
+- `SELECT` is written first but evaluated last.
 
 :::
 ::: {.column}
@@ -1379,7 +1379,7 @@ conn.close()
 - Run queries using `conn.execute("SQL QUERY").df()` directly from Python (or R).
 - Queries are passed as strings, and the result is a new table.
 - Close the connection when done.
-- We usually convert the result to a panda DataFrame for further analysis in Python with `.df()`.
+- We usually convert the result to a pandas DataFrame for further analysis in Python with `.df()`.
 :::
 :::
 
@@ -1441,7 +1441,7 @@ SELECT SUBSTRING(name, 1, 3) AS code FROM countries;
 
 
 
-## What you can do now
+## You are now a SQL user!
 
 #### ✅ You understand why we use databases
 - Why databases exist: memory limits, multiple users, data integrity

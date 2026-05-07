@@ -135,6 +135,21 @@ Course syllabus, schedule, and administrative information.
 
 :::
 
+::: {.grid}
+
+::: {.g-col-6}
+### 🗄️ Week 10: SQL Queries
+
+**Lectures:**
+- [Lecture 10: Queries](course_materials/week_10/10_queries.qmd)
+- [Script: build_cepii_db.py](course_materials/week_10/build_cepii_db.py)
+
+**Exercises:**
+- [Exercise 10: Building a Database](course_materials/week_10/E10_building.qmd)
+:::
+
+:::
+
 ## Learning Objectives
 
 By the end of this course, you will be able to:

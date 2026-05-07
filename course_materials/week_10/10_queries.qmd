@@ -40,44 +40,39 @@ execute:
 
 ## The benefits of databases
 
-::: {.fragment}
+![](../../assets/img/lecture_10_queries/benefits_db.png){fig-align="center" width="90%"}
+
+
+<!--
+
+## The benefits of databases
+
 #### Data management & integrity
 
 - Store and organize data in a structured way.
 - Enforce **data integrity** through constraints (`NOT NULL`, `CHECK`, keys, normalization, etc.).
 - Guarantee **consistency**: every row follows the same rules at all times.
-:::
 
-::: {.fragment}
 #### Data independence & shareability
 
 - Data lives independently of any script or session.
 - Multiple users can query the same database simultaneously.
 - All access goes through the DBMS: no direct file editing.
-:::
 
 
-## The benefits of databases
-
-::: {.fragment}
 #### Governance, reliability & security
 
 - Provide mechanisms for backup, recovery, and access control.
 - Ensure data is protected and available when needed.
-:::
 
-::: {.fragment}
 #### Efficient access & scalability
 
 - Optimized for fast querying on large volumes of data.
 - Handle larger datasets more efficiently than in-memory structures.
-:::
 
-::: {.fragment}
 > **Note:** See infographics in the [Appendix](#benefits_databases)
-:::
 
-
+-->
 
 
 ## Relational model
@@ -216,6 +211,9 @@ conn.close()
 - Use `ALTER TABLE` to modify the structure of an existing table (e.g. add a column). ⚠️
 
 :::
+
+<div style="margin-top: -1em;"></div>
+
 ::: {.fragment style="font-size: 0.8em;"}
 
 #### Data Manipulation Language DML
@@ -225,6 +223,8 @@ conn.close()
 
 :::
 
+<div style="margin-top: -1em;"></div>
+
 ::: {.fragment style="font-size: 0.8em;"}
 
 #### Data Query Language DQL
@@ -232,14 +232,15 @@ conn.close()
 
 :::
 
+<div style="margin-top: -1em;"></div>
+
 ::: {.fragment style="font-size: 0.8em;"}
 
-#### Data Control Language DCL
-#### Transaction Control Language TCL
+#### Data Control Language DCL + Transaction Control Language TCL
 
 :::
 
-> ⚠️covered in the take-home exercise
+> ⚠️ Covered in the take-home exercise
 
 
 

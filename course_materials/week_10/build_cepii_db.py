@@ -44,7 +44,7 @@ df_products_raw.head()
 # Always open the connection to the database
 conn = duckdb.connect("week_10/trade.db")
 
-# Drop in FK dependency order so re-runs don't crash
+# Drop in FK dependency order so re-runs don't crash (safety, you can also erase the .db file manually)
 conn.execute("DROP TABLE IF EXISTS flows")
 conn.execute("DROP TABLE IF EXISTS products")
 conn.execute("DROP TABLE IF EXISTS countries")

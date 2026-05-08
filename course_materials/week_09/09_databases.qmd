@@ -241,6 +241,7 @@ Apps, dashboards, and analysts all need to **extract data quickly**, without kno
 
 - **SQL** is the standard interface across all databases
 - The **query optimizer** decides *how* to run your query. You just say *what* you want.
+- Multi-access: many users can query the same data at the same time, without conflicts.
 
 :::
 
@@ -251,6 +252,8 @@ Apps, dashboards, and analysts all need to **extract data quickly**, without kno
 The system **cannot break down** (no failed transaction, a lost record, a data breach).<br><br>
 
 - The database protects the data in case of problems.
+- Recovery and backup mechanisms ensure data is not lost.
+- Access to the data is controlled and monitored.
 
 :::
 ::::

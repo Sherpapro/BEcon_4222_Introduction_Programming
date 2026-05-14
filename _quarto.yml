@@ -94,6 +94,16 @@ website:
             file: course_materials/week_10/10_queries.qmd
           - text: "Script: build_cepii_db.py"
             file: course_materials/week_10/build_cepii_db.py
+      - text: "Week 11"
+        menu:
+          - text: "Lecture 11: Conclusion"
+            file: course_materials/week_11/11_conclusion.qmd
+          - text: "Database: wdi.db"
+            file: course_materials/week_11/wdi.db
+          - text: "Script: build_wdi.py"
+            file: course_materials/week_11/build_wdi.py
+          - text: "Script: db_connection_examples.py"
+            file: course_materials/week_11/db_connection_examples.py
       - text: "Admin"
         menu:
           - text: "Syllabus"

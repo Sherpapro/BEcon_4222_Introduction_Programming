@@ -248,10 +248,9 @@ We use a dataset of World Bank indicators across countries and years to build tw
 
 
 
-## Code structure
+## Code structure {.nostretch}
 
-
-![](../../assets/img/lecture11_conclusion/process.png)
+![](../../assets/img/lecture11_conclusion/process.png){fig-align="center" width=70%}
 
 
 
@@ -354,11 +353,11 @@ erDiagram
 - All examples are in [db_connection_examples.py]{.path}
 
 
-## Querying data in classes
+## Querying data in classes {.nostretch}
 
 ![](../../assets/img/lecture11_conclusion/bal1.png){fig-align="center" width=80%}
 
-## Querying data in classes
+## Querying data in classes {.nostretch}
 
 ![](../../assets/img/lecture11_conclusion/bal2.png){fig-align="center" width=80%}
 

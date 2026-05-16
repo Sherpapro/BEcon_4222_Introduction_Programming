@@ -78,7 +78,7 @@
 
 = Overview
 
-*Learning Objectives:* After completion of the course, students will be able to design and execute projects in Economics and Econometrics in a systematic and reproducible way. The course has two core objectives: to develop intermediate programming skills and to apply collaborative, reproducible code development practices. First, students will understand and apply essential programming practices in Python, including writing modular code, documenting functions and implementing error handling. They will also be able to use object oriented programming by creating their own classes to structure larger projects. Second, students will be able to collaborate on projects using Git and version control, manage shared code and work with branching and pull requests. They will know how to design relational database schemas and interact with relational data from Python. They will also understand central concepts of DevOps, including continuous integration workflows and automated testing. Throughout the course they will learn to produce code that is reusable, maintainable and easy to share.
+*Learning Objectives:* After completion of the course, students will be able to design and execute projects in Economics and Econometrics in a systematic and reproducible way. The course has two core objectives: to develop intermediate programming skills and to apply collaborative, reproducible code development practices. First, students will understand and apply essential programming practices in Python, including writing modular code, documenting functions and implementing error handling. They will also be able to use object oriented programming by creating their own classes to structure larger projects. Second, students will be able to collaborate on projects using Git and version control, manage shared code and work with branching and pull requests. They will know how to design relational database schemas and interact with relational data from Python. Throughout the course they will learn to produce code that is reusable, maintainable and easy to share.
 
 #v(1em)
 
@@ -106,7 +106,7 @@
 = Examination overview
 
 The student assessment consists of two main components:
-1. *Final Exam (30% of the grade)*: This exam will cover the core theoretical concepts of the course. Form: digital exam, BYOD, duration tbd. Multiple-choice questions.
+1. *Final Exam (30% of the grade)*: This exam will cover the core theoretical concepts of the course. Form: digital exam, BYOD, duration tbd. Multiple-choice, true-false, multiple-correct and essay questions.
 2. *Group Project (70% of the grade)*: This is the primary applied assessment. Students will work in groups of 5 to design and build a 'software tool' that applies the skills learned in the course.
 
 
@@ -146,7 +146,7 @@ The student assessment consists of two main components:
     [*Lecture 7*], [Python: Introduction to Classes (OOP)], [Franziska], [17.04.2026],
     [*Lecture 8*], [Error Handling, documentation, Debugging], [Franziska], [24.04.2026],
     [*Lecture 9*], [Databases and relational database management systems], [Aurélien], [01.05.2026],
-    [*Lecture 10*], [Databases and relational database management systems], [Aurélien], [08.05.2026],
+    [*Lecture 10*], [Querying relational databases: SQL joins and aggregation], [Aurélien], [08.05.2026],
     [*Lecture 11*], [Conclusion, Q&A,Case Study], [Aurélien & Franziska], [15.05.2026],
     [*Lecture 12*], [Exam], [Aurélien & Franziska], [22.05.2026],
     [], [], [], [],
@@ -195,17 +195,15 @@ Lecture 4 provides the essential foundation for the course. This lecture will co
 
 == Lectures 5 and 6: Python for Data: Pandas and Matplotlib _F_
 
-This lecture introduces students to Pandas, along with some NumPy essentials. We will cover the workflow for data handling: reading data into a DataFrame, inspecting its structure, and managing missing data. Students will then learn the core tools for data manipulation, including filtering rows, grouping data, aggregating results, and merging different datasets. The goal is to show how to perform basic (descriptive) analysis using interesting, economics-related data. Finally, we will introduce basic visualization tools, demonstrating how to generate simple plots using matplotlib to visually inspect results.
+This lecture introduces students to Pandas, along with some NumPy essentials. We will cover the workflow for data handling: reading data into a DataFrame, inspecting its structure, and managing missing data. Students will then learn the core tools for data manipulation, including filtering rows, grouping data, and aggregating results. The goal is to show how to perform basic (descriptive) analysis using interesting, economics-related data. Finally, we will introduce basic visualization tools, demonstrating how to generate simple plots using matplotlib to visually inspect results.
 
-#text(fill: blue)[_Optional: Time permitting, we may also provide a brief outlook on modern high-performance alternatives like Polars or tensor-based frameworks like PyTorch._]
-
-*Exercise week 6*: Students apply classes and work with data in Python.
+*Exercise weeks 5 and 6*: Students practice data manipulation and analysis in Python using Pandas.
 
 #v(1em)
 
 == Lecture 7: Introduction to Classes (OOP) _F_
 
-This lecture introduces students to the fundamental concepts of Object-Oriented Programming (OOP). We will explain how OOP is used to structure code by bundling data and functionality into reusable blueprints. Students will learn the complete process of how to define their own custom class, covering the essential components: writing the constructor, defining attributes, and creating methods. The goal is to ensure students can confidently build and use their own custom objects in Python. After covering these basics, we will explore some practical examples to showcase what can be done with a class, helping to spark ideas for the final group projects.
+This lecture introduces students to the fundamental concepts of Object-Oriented Programming (OOP). We will explain how OOP is used to structure code by bundling data and functionality into reusable blueprints. Students will learn the complete process of how to define their own custom class, covering the essential components: writing the constructor, defining attributes, and creating methods. The goal is to ensure students can confidently build and use their own custom objects in Python. After covering these basics, we will explore some practical examples to showcase what can be done with a class, helping to spark ideas for the final group projects. Students will also learn how to structure a class in its own module and import it into an analysis script.
 
 #v(1em)
 
@@ -215,33 +213,35 @@ This lecture focuses on the critical skills needed to transform a basic script i
 
 #v(1em)
 
-== Lecture 9: Short overview of databases and relational database management systems _A_
+== Lecture 9: Relational Databases _A_
 
-This lecture introduces students to databases and relational database management systems. Using #link("https://www.postgresql.org/")[PostgreSQL], students learn what are database systems in order to manage and process large data sets. They will be introduced to creating, manipulating, and querying databases using SQL.
+This lecture introduces students to relational databases and database management systems, using #link("https://duckdb.org/")[DuckDB] as the DBMS. Students learn what a database is and why it is preferable to flat files for structured data. The lecture covers the relational model: tables, relationships, primary and foreign keys, and the star schema as a design pattern. Students learn to design schemas using ER diagrams, write SQL to create tables and load data, and run basic queries. The lecture also introduces the ETL pipeline — Extract, Transform, Load — and shows how to drive DuckDB from Python.
 
-*Exercise weeks 7-8*: Students run simple sql queries and set up a basic relational database management system.
+*Exercise week 9*: Students design a star schema and write the corresponding ER diagram, implement the ETL pipeline in Python, build the database with SQL, explore foreign key constraints, and write basic SELECT queries.
 
 *Sources:*
+- Martin Kleppmann, _Designing Data-Intensive Applications_ (O'Reilly, 2017)
 - "Big Data Analytics" from Ulrich Matter
 - #link("https://rse-book.github.io/data-management.html#databases")["Databases"], "Research Software Engineering", Matt Bannert
 
 #v(1em)
 
-== Lecture 10: DevOps _A_
+== Lecture 10: Querying Relational Databases _A_
 
-This lecture introduces students to basic principles of DevOps, like containerization and docker, Continuous Integration - Continuous Development (CI/CD). As an example, we'll run a simple API in docker and access the database in a container with postgres, or we will use GitHub Actions to update the api automatically.
-
-*Exercise weeks 9-10*: tbd.
+This lecture builds on Lecture 9 and focuses on SQL querying. Students learn how to combine data from multiple tables using JOIN operations and understand when each type is appropriate. The lecture then covers GROUP BY and the HAVING clause. The full query order is presented. Advanced topics include Common Table Expressions (CTEs) and window functions.
 
 *Sources:*
-- #link("https://h4sci.github.io/blog/self-hosted-shiny-pg/")[Survey with a Database Backend]
-- #link("https://github.com/h4sci/h4sci-gha-demo")["Github Action Demo"], Matt Bannert
+- Martin Kleppmann, _Designing Data-Intensive Applications_ (O'Reilly, 2017)
+- Simon Aubury & Ned Letcher, _Getting Started with DuckDB_ (Packt, 2024)
+- Marco Venturini, _Data Handling: Databases_ (HSG, 2025)
+- "Big Data Analytics" from Ulrich Matter
+- #link("https://rse-book.github.io/data-management.html#databases")["Databases"], "Research Software Engineering", Matt Bannert
 
 #v(1em)
 
 == Lecture 11: Conclusion, Q&A, Case Study _F, A_
 
-Lecture 11 is a practical, application-focused session that demonstrates how to combine several of the tools learned in the course. We will walk through the process of building a custom Python class from scratch. The goal of this class will be to solve a specific data-driven problem.
+Lecture 11 closes the course with a recap of the key concepts and skills covered across the semester, followed by exam information. The practical component presents an integrated case study. The case study demonstrates how Python classes, SQL queries, and an ETL pipeline can be combined into a single, reproducible analysis tool.
 
 #v(1em)
 

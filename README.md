@@ -33,7 +33,16 @@ This course builds on the materials covered in the course "Data Handling".
 - `examination/` - Exam-related materials and guidelines
 
 
-## Notes on compiling the Quarto documents
+# To publish the syllabus
+
+Compile the syllabus from typst using
+
+```
+typst compile admin/source/syllabus_v1.typ admin/syllabus_v1.pdf
+```
+
+
+# Notes on compiling the Quarto documents
 
 In the course, we're using `uv` for virtual environments. To render and preview Quarto documents and slides from the virtual environment, follow the following steps:
 

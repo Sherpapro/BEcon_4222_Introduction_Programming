@@ -882,7 +882,7 @@ Source: [ETL](https://en.wikipedia.org/wiki/Extract,_transform,_load)
 :::
 
 
-## 👓 The ETL pipeline
+## The ETL pipeline
 
 **Why not load raw data directly into a database?**
 
